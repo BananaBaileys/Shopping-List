@@ -31,6 +31,8 @@ export default function App() {
       </form>
       <h1 className="header">Shop List</h1>
       <ul className="list">
+        {todos.map}   
+        
         <li>
           <label>
             <input type="checkbox" />
