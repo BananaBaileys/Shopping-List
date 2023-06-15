@@ -15,10 +15,19 @@ export default function App() {
       ]
     })
     
-    setNewItem("")
+    setNewItem("")  // empty array so after pressing Add, it clears out 
   }
 
-
+  function toggleTodo(id, completed) {
+    setTodos(currentTodos => {
+      return currentTodos.map(todo => {
+        if (todo.id === id) {
+          return { ...todo, completed } // creat brand new state cus state is immutable 
+        }
+        return todo
+      })
+    })
+  }
 
   return (
     <>
@@ -36,7 +45,8 @@ export default function App() {
           return (
             <li key={todo.id}>
               <label>
-                <input type="checkbox" checked={todo.completed} />
+                <input type="checkbox" checked={todo.completed} 
+                onChange={e => toggleTodo(todo.id, e.target.checked)}/>
                 {todo.title}
               </label>
               <button className="btn btn-danger">Delete</button>
