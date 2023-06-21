@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function NewTodoForm() {
+export function NewForm() {
 
 
     const [newItem, setNewItem] = useState("")
