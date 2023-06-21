@@ -30,6 +30,7 @@ export default function App() {
     <>
       
       <NewForm.jsx />
+      {/* if it is capatialized letter, React knows it is a customer component that was created */}
 
       <h1 className="header">Shop List</h1>
       <ul className="list">
