@@ -48,7 +48,8 @@ export default function App() {
       </form>
       <h1 className="header">Shop List</h1>
       <ul className="list">
-        {todos.length === 0 && "No Todos"}
+        {todos.length === 0 && "No Todos"}  
+         {/* "No Todos" when thereare no list */}
         {todos.map(todo => {
           return (
             <li key={todo.id}>
