@@ -1,7 +1,8 @@
 import { useState } from "react"
 
-export function NewForm() {
+export function NewForm(props) {
 
+ 
 
     const [newItem, setNewItem] = useState("")
 
@@ -9,12 +10,9 @@ export function NewForm() {
     function handleSubmit(e) {
         e.preventDefault()
     
-        // setTodos(currentTodos => {
-        //   return [
-        //     ...currentTodos,
-        //     { id: crypto.randomUUID(), title: newItem, completed: false },
-        //   ]
-        // })
+        if(newItem === "") return
+
+        props.onSubmit(newItem)
         
         setNewItem("")  // empty array so after pressing Add, it clears out 
       }
