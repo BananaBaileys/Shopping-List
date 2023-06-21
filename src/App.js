@@ -2,21 +2,10 @@ import { useState } from "react"
 import "./style.css"
 
 export default function App() {
-  const [newItem, setNewItem] = useState("")
+
   const [todos, setTodos] = useState([])
 
-  function handleSubmit(e) {
-    e.preventDefault()
-
-    setTodos(currentTodos => {
-      return [
-        ...currentTodos,
-        { id: crypto.randomUUID(), title: newItem, completed: false },
-      ]
-    })
-    
-    setNewItem("")  // empty array so after pressing Add, it clears out 
-  }
+  
 
   function toggleTodo(id, completed) {
     setTodos(currentTodos => {
@@ -38,18 +27,11 @@ export default function App() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="new-item-form">
-        <div className="form-row">
-          <label htmlFor="item">Shopping Check List</label>
-          <input value={newItem} 
-          onChange={e => setNewItem(e.target.value)} type="text" id="item" />
-        </div>
-        <button className="btn">Add</button>
-      </form>
+      
       <h1 className="header">Shop List</h1>
       <ul className="list">
-        {todos.length === 0 && "No Todos"}  
-         {/* "No Todos" when thereare no list */}
+        {todos.length === 0 && "No items"}  
+         {/* "No items"" when thereare no list */}
         {todos.map(todo => {
           return (
             <li key={todo.id}>
