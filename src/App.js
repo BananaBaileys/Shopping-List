@@ -6,7 +6,14 @@ export default function App() {
 
   const [todos, setTodos] = useState([])
 
-  
+  function addTodo(title) {
+    setTodos(currentTodos => {
+      return [
+        ...currentTodos,
+        { id: crypto.randomUUID(), title, completed: false },
+      ]
+    })
+  }
 
   function toggleTodo(id, completed) {
     setTodos(currentTodos => {
@@ -29,7 +36,7 @@ export default function App() {
   return (
     <>
       
-      <NewForm.jsx />
+      <NewForm.jsx onSubmit={addTodo} />
       {/* if it is capatialized letter, React knows it is a customer component that was created */}
 
       <h1 className="header">Shop List</h1>

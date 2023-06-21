@@ -9,12 +9,12 @@ export function NewForm() {
     function handleSubmit(e) {
         e.preventDefault()
     
-        setTodos(currentTodos => {
-          return [
-            ...currentTodos,
-            { id: crypto.randomUUID(), title: newItem, completed: false },
-          ]
-        })
+        // setTodos(currentTodos => {
+        //   return [
+        //     ...currentTodos,
+        //     { id: crypto.randomUUID(), title: newItem, completed: false },
+        //   ]
+        // })
         
         setNewItem("")  // empty array so after pressing Add, it clears out 
       }
