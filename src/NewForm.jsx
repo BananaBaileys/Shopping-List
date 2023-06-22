@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function NewForm(props) {
+export function NewForm( {onSubmit} ) {
 
  
 
@@ -12,7 +12,7 @@ export function NewForm(props) {
     
         if(newItem === "") return
 
-        props.onSubmit(newItem)
+        onSubmit(newItem)
         
         setNewItem("")  // empty array so after pressing Add, it clears out 
       }
