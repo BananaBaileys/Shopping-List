@@ -37,11 +37,13 @@ export default function App() {
   return (
     <>
       
-      <NewForm.jsx onSubmit={addTodo} />
+      <NewForm onSubmit={addTodo} />
       {/* if it is capatialized letter, React knows it is a customer component that was created */}
 
       <h1 className="header">Shop List</h1>
-      <ShopList todos={todos}/>
+      <ShopList todos={todos}
+      toggleTodo={toggleTodo} deleteTodo={deleteTodo}
+      />
       
     </>
   )

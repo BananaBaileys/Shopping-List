@@ -1,4 +1,4 @@
-export function ListItem( { completed, id, title, toggletodo, deleteTodo} ) {
+export function ListItem( { completed, id, title, toggleTodo, deleteTodo} ) {
     return (
         <li >
                     <label>

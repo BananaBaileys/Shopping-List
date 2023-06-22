@@ -9,7 +9,7 @@ export function ShopList( {todos, toggleTodo, deleteTodo} ) {
                 return (
                     <ListItem {...todo} key={todo.id}
                     toggleTodo={toggleTodo}
-                    deleteTodo={deleteTotod}
+                    deleteTodo={deleteTodo}
                     />
                 )
                 })}   
