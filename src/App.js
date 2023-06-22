@@ -20,7 +20,7 @@ export default function App() {
     setTodos(currentTodos => {
       return currentTodos.map(todo => {
         if (todo.id === id) {
-          return { ...todo, completed } // creat brand new state cus state is immutable 
+          return { ...todo, completed } // create brand new state cus state is immutable 
         }
         return todo
       })
