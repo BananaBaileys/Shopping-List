@@ -40,25 +40,8 @@ export default function App() {
       {/* if it is capatialized letter, React knows it is a customer component that was created */}
 
       <h1 className="header">Shop List</h1>
-      <ul className="list">
-        {todos.length === 0 && "No items"}  
-         {/* "No items"" when thereare no list */}
-        {todos.map(todo => {
-          return (
-            <li key={todo.id}>
-              <label>
-                <input type="checkbox" checked={todo.completed} 
-                onChange={e => toggleTodo(todo.id, e.target.checked)}/>
-                {todo.title}
-              </label>
-              <button onClick={() => deleteTodo(todo.id)}
-              className="btn btn-danger">Delete</button>
-            </li>
-          )
-        })}   
-
-        
-      </ul>
+      <ShopList />
+      
     </>
   )
 }
