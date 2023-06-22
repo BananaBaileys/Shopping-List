@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { NewForm } from "./NewForm"
+import { ShopList } from "./ShopList"
 import "./style.css"
 
 export default function App() {
@@ -40,7 +41,7 @@ export default function App() {
       {/* if it is capatialized letter, React knows it is a customer component that was created */}
 
       <h1 className="header">Shop List</h1>
-      <ShopList />
+      <ShopList todos={todos}/>
       
     </>
   )
