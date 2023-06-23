@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { NewForm } from "./NewForm"
 import { ShopList } from "./ShopList"
 import "./style.css"
@@ -6,6 +6,17 @@ import "./style.css"
 export default function App() {
 
   const [todos, setTodos] = useState([])
+
+
+  useEffect( () => {
+      localStorage.setItem("ITEMS", JSON.stringify(todos))
+  }, [todos]
+
+  )
+
+  // run this function everytime when the object in our array in the 2nd property change
+  // in this case, anytime our todos change, we call this function 
+  // that takes our todos and store them inside local storage
 
   function addTodo(title) {
     setTodos(currentTodos => {
