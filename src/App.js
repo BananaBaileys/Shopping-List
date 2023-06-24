@@ -5,7 +5,13 @@ import "./style.css"
 
 export default function App() {
 
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(() => {
+    const localValue = localStorage.getItem("ITEMS")
+    if(localValue == null) return []
+    return JSON.parse(localValue) 
+    // checking the local storage to see if the value exists
+    // if it doesn't it defaults to an enpty array
+  })
 
 
   useEffect( () => {
