@@ -2,10 +2,7 @@ import { useState } from "react"
 
 export function NewForm( {onSubmit} ) {
 
- 
-
     const [newItem, setNewItem] = useState("")
-
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -16,7 +13,6 @@ export function NewForm( {onSubmit} ) {
         
         setNewItem("")  // empty array so after pressing Add, it clears out 
       }
-
 
     return (
         <form onSubmit={handleSubmit} className="new-item-form">

@@ -14,7 +14,6 @@ export function ShopList( {todos, toggleTodo, deleteTodo} ) {
                 )
                 })}   
 
-                
             </ul>
         )
     }
