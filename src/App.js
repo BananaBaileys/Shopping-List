@@ -17,7 +17,7 @@ export default function App() {
   useEffect( () => {
       localStorage.setItem("ITEMS", JSON.stringify(todos))
   }, [todos]
-
+  // in react, hook needs to be at the top of the function
   )
 
   // run this function everytime when the object in our array in the 2nd property change
