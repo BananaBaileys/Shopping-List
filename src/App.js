@@ -13,7 +13,6 @@ export default function App() {
     // if it doesn't it defaults to an enpty array
   })
 
-
   useEffect( () => {
       localStorage.setItem("ITEMS", JSON.stringify(todos))
   }, [todos]
