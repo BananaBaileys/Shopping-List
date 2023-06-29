@@ -51,7 +51,6 @@ export default function App() {
 
   return (
     <>
-      
       <NewForm onSubmit={addTodo} />
       {/* if it is capatialized letter, React knows it is a customer component that was created */}
 
@@ -59,7 +58,6 @@ export default function App() {
       <ShopList todos={todos}
       toggleTodo={toggleTodo} deleteTodo={deleteTodo}
       />
-      
     </>
   )
 }
