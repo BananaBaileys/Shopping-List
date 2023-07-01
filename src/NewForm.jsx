@@ -6,11 +6,8 @@ export function NewForm( {onSubmit} ) {
 
     function handleSubmit(e) {
         e.preventDefault()
-    
         if(newItem === "") return
-
         onSubmit(newItem)
-        
         setNewItem("")  // empty array so after pressing Add, it clears out 
       }
 
