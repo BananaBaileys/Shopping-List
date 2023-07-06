@@ -47,7 +47,7 @@ export default function App() {
     setTodos(currentTodos => {
       return currentTodos.filter(todo => todo.id !== id)
     })
-  }
+  } 
 
   return (
     <>
